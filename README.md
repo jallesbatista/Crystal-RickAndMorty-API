@@ -331,6 +331,4 @@ Vazio
 
 [ Voltar para o topo ](#sumário)
 
-Obrigado por avaliar o meu projeto, me daparei com um bug ao rodar os testes de "Unhandle Exception" em relação a versão HTTP utilizada. Não o conseguir resolver nem encontrei em algum forum como poderia, porém caso queria testar as rotas, creio que estarão de acordo com o esperado.
-
 - [Jalles Batista](https://github.com/your-github-user) - creator and maintainer
