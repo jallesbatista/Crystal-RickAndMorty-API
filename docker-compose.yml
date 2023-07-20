@@ -1,0 +1,53 @@
+version: '3'
+services:
+  migration:
+    container_name: codechallenge_migration
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: crystal /app/sam.cr db:migrate
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    container_name: codechallenge_db
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=1010
+      - POSTGRES_DB=codechallenge_db
+      - POSTGRES_USER=jalles
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U jalles -d codechallenge_db" ]
+      interval: 5s
+      timeout: 2s
+      retries: 5
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  app:
+    container_name: codechallenge_api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: code_challenge
+    stdin_open: true
+    tty: true
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    depends_on:
+      db:
+        condition: service_healthy
+      migration:
+        condition: service_completed_successfully
+
+volumes:
+  pgdata:
