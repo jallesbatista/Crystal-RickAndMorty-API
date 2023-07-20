@@ -331,4 +331,4 @@ Vazio
 
 [ Voltar para o topo ](#sumário)
 
-- [Jalles Batista](https://github.com/your-github-user) - creator and maintainer
+- [Jalles Batista](https://github.com/jallesbatista) - creator and maintainer
