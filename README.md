@@ -8,7 +8,7 @@
 
 - [Início Rápido](#início-rápido)
   - [Executar o projeto](#executar-o-projeto-docker)
-- [Endpoints](#4-endpoints)
+- [Endpoints](#endpoints)
 - [Testes](#testes)
 
 ## Início Rápido
@@ -25,13 +25,13 @@ Antes de prosseguir confirme que possui o <strong><a href="https://docs.docker.c
 Faça um clone do projeto na sua máquina:
 
 ```shell
-git clone git@code-challenge.milenio.capital:38e0fbebad79fc7806c81fb77a84abe5d1e4acd6
+git clone git@github.com:jallesbatista/Crystal-RickAndMorty-API.git
 ```
 
 Entre na pasta do arquivo que clonou:
 
 ```shell
-cd 38e0fbebad79fc7806c81fb77a84abe5d1e4acd6 && code .
+cd Crystal-RickAndMorty-API && code .
 ```
 
 Execute o comando e aguarde as imagens serem compiladas e os containers executados, após isso a aplicação já estará pronta para uso:
@@ -45,8 +45,7 @@ docker compose up -d
 [ Voltar para o topo ](#sumário)
 
 <h4 align="center"><strong>🚨 Importante 🚨</strong></h4>
-Antes de prosseguir confirme que possui o <strong><a 
-Para rodar os testes, certifique-se de ter o <strong><a href="https://crystal-lang.org/install/">Crystal</a></strong> instalado em sua máquina. Ele será necessário para se utilizar dos comando a seguir:
+Antes de prosseguir confirme que possui o <strong><a href="https://crystal-lang.org/install/">Crystal</a></strong> instalado em sua máquina. Ele será necessário para se utilizar dos comando a seguir:
 
 <br>
 
